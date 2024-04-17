@@ -1,7 +1,28 @@
 import string
-from getpass import getpass
+import getpass
+import sys
+import msvcrt
 
-password=getpass("Enter Password:")
+def getpass_star(prompt="Password: "):
+    print("Enter Password:")
+    sys.stdout.write(prompt)
+    password = ""
+    while True:
+        char = msvcrt.getch()
+        if char == b'\r':
+            sys.stdout.write('\n')
+            break
+        elif char == b'\x08':  # Backspace
+            if password:
+                password = password[:-1]
+                sys.stdout.write('\b \b')  # Erase the character
+        else:
+            password += char.decode("utf-8")
+            sys.stdout.write('*')
+    return password
+
+# Get password with asterisks
+password = getpass_star()
 
 upper_case=any([1 if c in string.ascii_uppercase else 0 for c in password])
 lower_case=any([1 if c in string.ascii_lowercase else 0 for c in password])
@@ -12,12 +33,14 @@ characters=[upper_case, lower_case, special, digits]
 length=len(password)
 score=0
 
-with open('common.txt', 'r') as f:
-    common=f.read().splitlines()
+
+with open("common.txt", "rt") as f:
+    common = f.read().splitlines()
 if password in common: 
     print("Password was found in common list of passwords. Score: 0/7")    
-    exit()
-    
+
+
+
 if length>8:
     score+=1
 if length>12:
@@ -32,7 +55,7 @@ if sum(characters)>2:
     score+=1
 if sum(characters)>3:
     score+=1
-print(f"Password has {str(sum(characters))} different character types, adding {str(sum(characters))-1} points to score ")   
+print(f"Password has {str(sum(characters))} different character type(s), adding {str(sum(characters)-1)} points to score ")   
 
 if score<4:
     print(f"The password is quite weak! Score: {str(score)}/7")
