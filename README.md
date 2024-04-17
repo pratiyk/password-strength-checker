@@ -7,7 +7,7 @@
 *  Does not display user password.
 *******
 ### Libraries Used
-[ ] sys
-[ ] getpass 
-[ ] string
-[ ] msvcrt
+* sys
+*  getpass
+*  string
+*  msvcrt
