@@ -12,21 +12,21 @@ This Python project provides a simple yet effective way to assess the strength o
 
 1. Clone this repository:
 
-    bash git clone https://github.com/pratiyk/password-strength-checker.git
+    `bash git clone https://github.com/pratiyk/password-strength-checker.git` 
 
 2. Navigate to the project directory:
 
-    bash cd password-strength-checker
+    `bash cd password-strength-checker`
 
 3. Install dependencies (if any):
 
-    pip install -r requirements.txt
+    `pip install -r requirements.txt`
 
 ## Usage
 
 Run the script using Python:
 
-    python password_strength_checker.py
+    `python password_strength_checker.py`
 
 ## Working Demo
 ![image](https://github.com/pratiyk/password-strength-checker/assets/38837970/81322074-d3f9-4a5a-aa17-be9f8a05e14a)
