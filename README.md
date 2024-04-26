@@ -10,45 +10,24 @@ This Python project provides a simple yet effective way to assess the strength o
 
 ## Installation
 
-    Clone this repository:
+1. Clone this repository:
 
-    bash
+    bash git clone https://github.com/pratiyk/password-strength-checker.git
 
-git clone https://github.com/yourusername/password-strength-checker.git
+2. Navigate to the project directory:
 
-Navigate to the project directory:
+    bash cd password-strength-checker
 
-bash
-
-cd password-strength-checker
-
-Install dependencies (if any):
+3. Install dependencies (if any):
 
     pip install -r requirements.txt
 
-Usage
+## Usage
 
-    Run the script using Python:
+Run the script using Python:
 
     python password_strength_checker.py
 
-    Follow the prompts to input passwords that you want to evaluate.
-
-    Receive feedback on the strength of each password based on the predefined criteria.
-
-    Optionally, make adjustments to the criteria or customize the script to suit your specific requirements.
-
-Contributing
-
-Contributions are welcome! If you encounter any issues, have suggestions for improvements, or want to add new features, please feel free to open an issue or submit a pull request.
-License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-### Working Demo
+## Working Demo
 ![image](https://github.com/pratiyk/password-strength-checker/assets/38837970/81322074-d3f9-4a5a-aa17-be9f8a05e14a)
 ******
-### Libraries Used
-* sys
-*  getpass
-*  string
-*  msvcrt
